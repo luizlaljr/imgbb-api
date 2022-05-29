@@ -41,6 +41,7 @@ module.exports = {
       })
       
     } catch (error) {
+      console.log(error)
       return res.status(500).json({
         "type-message":"error",
         "message": "There was a problem when image upload.",
