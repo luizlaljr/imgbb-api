@@ -17,6 +17,10 @@ module.exports = {
         name,
         image
       } = req.body;
+
+      console.log(key);
+      console.log(name);
+      console.log(image);
       
       const formData = new FormData();
       formData.append('key', key);
