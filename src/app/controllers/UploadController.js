@@ -17,12 +17,6 @@ module.exports = {
         name,
         image
       } = req.body;
-
-      console.log(req);
-
-      console.log(key);
-      console.log(name);
-      console.log(image);
       
       const formData = new FormData();
       formData.append('key', key);
@@ -43,11 +37,11 @@ module.exports = {
         "message": "Image upload successfully",
         "title-image":upload.data.data.title,
         "url-image": upload.data.data.url,
-        "url-thumb": upload.data.data.thumb.url
+        "url-thumb": upload.data.data.thumb.url,
+        "url-delete": upload.data.data.delete_url
       })
       
     } catch (error) {
-      console.log(error)
       return res.status(500).json({
         "type-message":"error",
         "message": "There was a problem when image upload.",
