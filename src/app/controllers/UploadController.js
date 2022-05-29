@@ -18,6 +18,8 @@ module.exports = {
         image
       } = req.body;
 
+      console.log(req);
+
       console.log(key);
       console.log(name);
       console.log(image);
